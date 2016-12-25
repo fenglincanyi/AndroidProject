@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="accelerateStyle">
+        <item>accelerate_interpolator</item>
+        <item>accelerate_decelerate_interpolator</item>
+    </string-array>
+    <string-array name="decelerateStyle">
+        <item>decelerate_interpolator</item>
+    </string-array>
+    <string-array name="otherStyle">
+        <item>linear_interpolator</item>
+        <item>cycle_interpolator</item>
+        <item>anticipate_interpolator</item>
+        <item>anticipate_overshoot_interpolator</item>
+        <item>overshoot_interpolator</item>
+        <item>bounce_interpolator</item>
+        <!--<item>path_interpolator</item>-->
+        <item>fast_out_linear_in_interpolator</item>
+        <item>fast_out_linear_slow_in_interpolator</item>
+    </string-array>
+    <string-array name="timeStyle">
+        <item>0.5s</item>
+        <item>1  s</item>
+        <item>1.5s</item>
+        <item>2  s</item>
+        <item>2.5s</item>
+        <item>3  s</item>
+    </string-array>
+</resources>

@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFD8DC"
+    tools:context="com.geng.animationdemo.AccelerateFragment">
+
+    <Spinner
+        android:id="@+id/decelerateSp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:entries="@array/otherStyle"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:id="@+id/timeSp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:entries="@array/timeStyle" />
+
+    <Button
+        android:id="@+id/deceBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:text="run"
+        android:textAllCaps="false" />
+
+    <ImageView
+        android:id="@+id/deceiv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/image" />
+
+</FrameLayout>
