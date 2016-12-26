@@ -44,7 +44,7 @@ public class AccelerateFragment extends Fragment implements View.OnClickListener
         spinner2 = (Spinner) view.findViewById(R.id.timeSp);
         deceiv = (ImageView)view.findViewById(R.id.deceiv);
 
-        translateAnimation = new TranslateAnimation(0, 0, 0, 1500);
+        translateAnimation = new TranslateAnimation(0, 0, 0, ScreenUtil.dip2px(getActivity(), 390f));
         translateAnimation.setFillAfter(true);
         translateAnimation.setDuration(500);
         translateAnimation.setInterpolator(new AccelerateInterpolator());
@@ -102,6 +102,7 @@ public class AccelerateFragment extends Fragment implements View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.deceBt:
+                deceiv.clearAnimation();// 消除原来的动画，小球从新开始
                 deceiv.startAnimation(translateAnimation);
                 break;
         }

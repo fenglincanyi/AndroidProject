@@ -12,10 +12,8 @@ import android.view.animation.AnticipateInterpolator;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.CycleInterpolator;
-import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
-import android.view.animation.PathInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -50,11 +48,10 @@ public class OtherFragment extends Fragment implements View.OnClickListener {
         spinner2 = (Spinner) view.findViewById(R.id.timeSp);
         deceiv = (ImageView) view.findViewById(R.id.deceiv);
 
-        translateAnimation = new TranslateAnimation(0, 0, 0, 1500);
+        translateAnimation = new TranslateAnimation(0, 0, 0, ScreenUtil.dip2px(getActivity(), 390f));
         translateAnimation.setFillAfter(true);
         translateAnimation.setDuration(500);
         translateAnimation.setInterpolator(new LinearInterpolator());
-
 
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -131,6 +128,7 @@ public class OtherFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.deceBt:
+                deceiv.clearAnimation();
                 deceiv.startAnimation(translateAnimation);
                 break;
         }
