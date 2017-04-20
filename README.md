@@ -8,5 +8,4 @@
 | SwipeMenuRecyclerView    |   RecyclerView 滑动删除 |
 | TabListDemo    |   Fragment Tab 典型示例 |
 | ViewPagerDemo    |   ViewPagerDemo 常用示例 |
-
-
+| ResumeAnimation    |   可双向拖动的seekbar(完善中) |
