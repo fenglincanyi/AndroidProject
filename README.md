@@ -11,3 +11,4 @@
 | SeekProgressLayout    |   可双向拖动的seekbar|
 | StatusBarDemo    |   沉浸式状态栏/全屏显示 |
 | ScrollScrollViewListView    |   ScrollView-ListView-NestedScrollView-RecyclerView实验 |
+| DragSortByRecyclerView    |   可拖动排序的Grid, 用 RecyclerView 实现|
