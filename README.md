@@ -12,3 +12,4 @@
 | StatusBarDemo    |   沉浸式状态栏/全屏显示 |
 | ScrollScrollViewListView    |   ScrollView-ListView-NestedScrollView-RecyclerView实验 |
 | DragSortByRecyclerView    |   可拖动排序的Grid, 用 RecyclerView 实现|
+| AnnotationProcessorDemo    |   注解处理器使用demo（自动生成JavaBean）|
