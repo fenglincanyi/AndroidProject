@@ -13,3 +13,4 @@
 | ScrollScrollViewListView    |   ScrollView-ListView-NestedScrollView-RecyclerView实验 |
 | DragSortByRecyclerView    |   可拖动排序的Grid, 用 RecyclerView 实现|
 | AnnotationProcessorDemo    |   注解处理器使用demo（自动生成JavaBean）|
+| AIDLDemo    |   AIDL进程间通信demo|
