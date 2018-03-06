@@ -1,0 +1,29 @@
+apply plugin: 'groovy'
+apply from: '../gradle_publish.gradle'
+
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile gradleApi()
+    compile localGroovy()
+}
+
+
+
+
+//apply plugin: 'maven'
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            pom.groupId = 'com.geng.insert'
+//            pom.artifactId = 'insert-plugin'
+//            pom.version = '1.0.0'
+//
+//            //本地的Maven地址设置: project/repo
+//            repository(url: uri('../repo'))
+//        }
+//    }
+//}

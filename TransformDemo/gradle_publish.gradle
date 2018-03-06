@@ -1,0 +1,58 @@
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+group = GROUP
+version = VERSION_CODE
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+
+task sourcesJar(type: Jar) {
+    sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+// 上传 maven
+//uploadArchives {
+//    repositories.mavenDeployer {
+//        repository(url: repositoryUrl) {
+//            authentication(userName: getPropertyFromLocalProperties("USER"), password: getPropertyFromLocalProperties("PASSWORD"))
+//        }
+//    }
+//}
+
+// 本地测试：本地maven repo
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            pom.groupId = 'com.geng.insert'
+//            pom.artifactId = 'insert-plugin'
+//            pom.version = '1.0.0'
+//
+//            //本地的Maven地址设置: project/repo
+//            repository(url: uri('../repo'))
+//        }
+//    }
+//}
+
+
+
+// 上传jcenter
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    configurations = ['archives']
+    pkg {
+        repo = 'maven'
+        name = "${project.group}:${project.name}"
+        licenses = ['Apache-2.0']
+//        websiteUrl = 'http://tech.meituan.com/android_autopatch.html'
+        vcsUrl = 'https://github.com/fenglincanyi'
+        publish = true
+    }
+}
